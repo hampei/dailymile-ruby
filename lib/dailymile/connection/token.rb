@@ -15,13 +15,12 @@ module Dailymile
   
     def request(verb, path, params = {}, headers = {})
       make_request(verb, path, params, headers) do |verb, path, params, headers|
-        @access_token.request(verb, path, params, headers)
+        @access_token.request(verb, path, {:headers => headers})
       end
     end
     
     def set_access_token(token)
-      @access_token = OAuth2::AccessToken.new(@client, token)
-      @access_token.token_param = 'oauth_token'
+      @access_token = OAuth2::AccessToken.new(@client, token, :param_name => 'oauth_token', :mode => :query)
     end
     
   end

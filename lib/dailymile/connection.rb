@@ -61,7 +61,7 @@ module Dailymile
     def handle_response(response)
       case response.status
       when 200, 201
-        JSON.parse(response) unless response.nil? # rescue nil
+        JSON.parse(response.body) unless response.nil? # rescue nil
       when 404
         raise NotFound
       when 401

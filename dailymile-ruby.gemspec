@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name = 'dailymile-ruby'
-  s.version = '0.3.0-HH'
+  s.version = '0.3.0'
   s.authors = ["lostinpatterns", "Hampei"]
   s.email = [%q{blweiner@gmail.com}]
   s.description = %q{This gem wraps the dailymile API that's available at http://www.dailymile.com/api}

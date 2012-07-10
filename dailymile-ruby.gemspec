@@ -1,7 +1,7 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = 'dailymile-ruby'
+  s.name = 'dailymile-ruby2'
   s.version = '0.3.0'
   s.authors = ["lostinpatterns", "Hampei"]
   s.email = [%q{blweiner@gmail.com}]

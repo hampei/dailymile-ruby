@@ -77,7 +77,7 @@ module Dailymile
           raise Unavailable, "#{response.status}: #{response}"
         end
       when 422
-        errors = JSON.parse(response) unless response.nil? # rescue nil
+        errors = JSON.parse(response.body) unless response.nil? # rescue nil
         raise UnprocessableEntity, errors
       else
         raise DailymileError,"#{response.status}: #{response}"
